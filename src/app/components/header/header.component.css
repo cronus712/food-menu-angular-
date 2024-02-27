@@ -1,0 +1,40 @@
+.container
+{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+header {
+  border-bottom: 2px solid rgb(185, 75, 75);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+}
+
+a.logo {
+padding: 1em;
+}
+
+a {
+color: rgb(143, 56, 56);
+padding: 1em;
+background-color: rgb(232, 164, 164);
+
+}
+
+a:hover {
+  background-color: rgb(216, 149, 94)
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li a {
+display: inline-block;
+padding: 1em;
+}
+
+
