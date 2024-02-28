@@ -24,4 +24,8 @@ export class FoodService {
    return this.http.delete<Food>(url);
   }
 
+  addFoodItem(food : Food) : Observable<Food> {
+    return this.http.post<Food>(this.baseUrl, food)
+  }
+
 }

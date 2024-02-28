@@ -1,7 +1,9 @@
+
+<app-add-food></app-add-food>
+
 <div class="container">
   <app-food-item *ngFor="let food of foods" [food] = "food"
    (onDeleteTask)="onDelete(food)">
 </app-food-item>
 </div>
-
 

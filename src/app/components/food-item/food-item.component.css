@@ -44,3 +44,19 @@
   font-size: 18px; /* Set rating text size */
   color: #f0ad4e; /* Yellowish orange color for stars */
 }
+
+.food-item button {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border: solid 1px red;
+  border-radius: 10%;
+  color:white ;
+  margin-left: 100px;
+}
+
+.food-item button:hover {
+  cursor: pointer;
+  background-color: #ddd;
+
+}

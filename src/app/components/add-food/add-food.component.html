@@ -1,0 +1,31 @@
+<div class="container">
+
+ <form (ngSubmit) ="addFood()" class="add-form">
+
+  <div class="form-control">
+    <label for="name">Food name</label>
+    <input type="text" [(ngModel)] ="name"
+    name="name" id="name" placeholder="Add food name">
+  </div>
+
+  <div class="form-control">
+    <label for="description">Food Description</label>
+    <input type="text" [(ngModel)] ="description"
+    name="description" id="description" placeholder="Add food description">
+  </div>
+
+  <div class="form-control">
+    <label for="image">Food image</label>
+    <input type="file" [(ngModel)] ="image"
+    name="image" id="image" (change)="onImageSelected($event)">
+  </div>
+
+  <div class="form-control">
+    <label for="name">Food rating</label>
+    <input type="number" [(ngModel)] ="rating"
+    name="rating" id="rating" placeholder="Add food rating">
+  </div>
+
+  <button type="submit">Add Food Item</button>
+ </form>
+</div>

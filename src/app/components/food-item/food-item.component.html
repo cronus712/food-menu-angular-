@@ -4,11 +4,12 @@
 
       <h2>
         {{ food.name }}
+        <button type="button" (click)="onDelete(food)">
+          X
+        </button>
       </h2>
 
-       <button type="button" (click)="onDelete(food)">
-         X
-       </button>
+
       <p>
         {{ food.description }}
       </p>
