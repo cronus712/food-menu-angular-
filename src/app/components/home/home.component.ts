@@ -23,4 +23,10 @@ export class HomeComponent {
       )
   }
 
+  AddFood(food : Food) {
+    this.foodService.addFoodItem(food).subscribe(
+      (food) =>this.foods.push(food)
+    )
+  }
+
 }

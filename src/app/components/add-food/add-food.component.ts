@@ -14,6 +14,8 @@ export class AddFoodComponent {
    imageFile !: File | null;
    rating !: number;
 
+
+
    onImageSelected(event: any) {
     this.imageFile = event.target.files[0]; // Access the selected file
   }
