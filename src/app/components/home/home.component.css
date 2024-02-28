@@ -1,0 +1,56 @@
+.food-list {
+  list-style: none; /* Remove default list styling */
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+    /* Style the container element */
+    display: flex; /* Arrange elements horizontally */
+    padding: 0; /* Remove default padding */
+    flex-wrap:wrap; /* Allow elements to wrap on multiple lines */
+
+}
+
+.food-item {
+  /* Style each food item */
+  margin: 10px; /* Add spacing between items */
+  width: 250px; /* Set a fixed width for each item */
+  background-color: #f5f5f5; /* Light background color */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text within item */
+  padding: 15px; /* Add padding for content */
+}
+
+.food-item img {
+  /* Style the image */
+  width: 100%; /* Display image full width */
+  height: 150px; /* Set image height */
+  object-fit: cover; /* Crop image to fit within the container */
+  margin-bottom: 10px; /* Add space between image and content */
+}
+
+.food-item a {
+  cursor: pointer;
+ }
+
+.food-item h2 {
+  /* Style the food name */
+  font-size: 18px; /* Set heading size */
+  margin-bottom: 5px; /* Add space after heading */
+}
+
+.food-item p {
+  /* Style the description */
+  font-size: 14px; /* Set text size */
+  color: #666; /* Gray color for description */
+  margin-bottom: 5px; /* Add space after description */
+}
+
+.food-item .rating {
+  /* Style the rating */
+  font-size: 18px; /* Set rating text size */
+  color: #f0ad4e; /* Yellowish orange color for stars */
+}
