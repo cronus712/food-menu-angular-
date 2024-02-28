@@ -4,44 +4,29 @@
       "id": 1,
       "name": "kafteji",
       "description": "Tunisian vegetable dish",
-      "image" : "assets/images/6.jpg",
-      "rating": 3.5
-    },
-    {
-      "id": 2,
-      "name": "Mekla",
-      "description": "Tunisian vegetable dish",
-      "image" : "assets/images/1.jpg",
+      "image": "assets/images/6.jpg",
       "rating": 3.5
     },
     {
       "id": 3,
       "name": "Kaskrout",
       "description": "Tunisian vegetable dish",
-      "image" : "assets/images/2.jpg",
-      "rating": 3.5
-    },
-    {
-      "id": 4,
-      "name": "ddd",
-      "description": "Tunisian vegetable dish",
-      "image" : "assets/images/3.jpg",
+      "image": "assets/images/2.jpg",
       "rating": 3.5
     },
     {
       "id": 5,
       "name": "kafteji",
       "description": "Tunisian vegetable dish",
-      "image" : "assets/images/4.jpg",
+      "image": "assets/images/4.jpg",
       "rating": 3.5
     },
     {
       "id": 6,
       "name": "kafteji",
       "description": "Tunisian vegetable dish",
-      "image" : "assets/images/5.jpg",
+      "image": "assets/images/5.jpg",
       "rating": 3.5
     }
   ]
-
 }

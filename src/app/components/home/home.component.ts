@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Food } from 'src/app/food';
 import { FoodService } from 'src/app/services/food-service.service';
 
@@ -14,6 +15,12 @@ export class HomeComponent {
 
   ngOnInit(): void {
      this.foodService.getAllFood().subscribe((food) => this.foods = food);
+  }
+
+  onDelete(food : Food) {
+    this.foodService.deleteFoodItem(food).subscribe(
+      () => (this.foods = this.foods.filter((f) => f.id !== food.id))
+      )
   }
 
 }

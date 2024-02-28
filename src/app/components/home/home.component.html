@@ -1,23 +1,7 @@
 <div class="container">
-  <ul *ngFor="let food of foods" class="food-list">
-    <li class="food-item">
-
-      <h2>
-        {{ food.name }}
-      </h2>
-      <p>
-        {{ food.description }}
-      </p>
-      <a>
-        <img [src]="food.image" alt="{{ food.name }}">
-      </a>
-
-        <div class="rating">
-          {{ food.rating }}
-        </div>
-    </li>
-
-  </ul>
+  <app-food-item *ngFor="let food of foods" [food] = "food"
+   (onDeleteTask)="onDelete(food)">
+</app-food-item>
 </div>
 
 

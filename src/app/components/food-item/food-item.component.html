@@ -1,1 +1,24 @@
-<p>food-item works!</p>
+<div class="container">
+  <ul class="food-list">
+    <li class="food-item">
+
+      <h2>
+        {{ food.name }}
+      </h2>
+
+       <button type="button" (click)="onDelete(food)">
+         X
+       </button>
+      <p>
+        {{ food.description }}
+      </p>
+      <a>
+        <img [src]="food.image" alt="{{ food.name }}">
+      </a>
+        <div class="rating">
+          {{ food.rating }}
+        </div>
+    </li>
+
+  </ul>
+</div>
