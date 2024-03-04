@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FoodComponent } from './components/food/food.component';
 import { FoodItemComponent } from './components/food-item/food-item.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
+import { FoodItemDetailComponent } from './components/food-item-detail/food-item-detail.component';
 
 // const routes: Routes = [
 //   {path: '', component: HomeComponent}
@@ -23,7 +24,8 @@ import { AddFoodComponent } from './components/add-food/add-food.component';
     HomeComponent,
     FoodComponent,
     FoodItemComponent,
-    AddFoodComponent
+    AddFoodComponent,
+    FoodItemDetailComponent
   ],
   imports: [
     BrowserModule,

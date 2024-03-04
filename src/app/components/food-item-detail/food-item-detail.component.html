@@ -1,0 +1,26 @@
+<div class="product-detail">
+  <div class="product-image-container">
+    <img class="product-image" [src]="food.image" alt="{{ food.name }}">
+  </div>
+
+  <div class="product-info">
+    <h2 class="product-name">{{ food.name }}</h2>
+
+
+    <p class="product-description">{{ food.description }}</p>
+
+    <div class="product-rating">
+      <span class="rating-label">Rating:</span>
+      <span class="rating-value">{{ food.rating }}</span>
+      <span class="rating-stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o"></i>
+      </span>
+    </div>
+
+    <button class="add-to-cart-button" type="button">Add to Cart</button>
+  </div>
+</div>

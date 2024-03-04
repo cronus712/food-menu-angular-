@@ -10,7 +10,7 @@ import { FoodService } from 'src/app/services/food-service.service';
 })
 export class HomeComponent {
   foods : Food [] = [];
-
+  food !: Food;
   constructor(private foodService : FoodService) {}
 
   ngOnInit(): void {
@@ -29,4 +29,8 @@ export class HomeComponent {
     )
   }
 
+  // getFood(food : Food) {
+  //   this.foodService.getFoodItem(food).subscribe((food) => this.food = food);
+  //   console.log('here')
+  // }
 }

@@ -11,6 +11,12 @@ export class FoodItemComponent {
 
  @Input() food !: Food;
  @Output() onDeleteTask : EventEmitter<Food> = new EventEmitter()
+ @Output() onFoodDetails = new EventEmitter<Food>();
+ 
+
+  gotoDetails(food: Food) {
+    this.onFoodDetails.emit(food)
+  }
 
   constructor() {}
 

@@ -28,4 +28,9 @@ export class FoodService {
     return this.http.post<Food>(this.baseUrl, food)
   }
 
+  getFoodItem(id : number) : Observable<Food> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Food>(url);
+  }
+
 }

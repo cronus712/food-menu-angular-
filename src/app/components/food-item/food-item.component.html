@@ -14,7 +14,7 @@
         {{ food.description }}
       </p>
       <a>
-        <img [src]="food.image" alt="{{ food.name }}">
+        <img [src]="food.image" alt="{{ food.name }}"  routerLink="/food-item/{{ food.id }}">
       </a>
         <div class="rating">
           {{ food.rating }}

@@ -1,0 +1,80 @@
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust width as needed */
+}
+
+.product-image-container {
+  width: 50rem; /* Adjust image width */
+  margin-right: 20px; /* Add spacing between image and content */
+}
+
+.product-image {
+  width: 20rem; /* Fill container width */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add subtle border radius */
+}
+
+.product-info {
+  width: 100%; /* Adjust content width */
+  padding: 20px;
+  border: 1px solid #ddd; /* Add a thin border */
+  border-radius: 5px; /* Add subtle border radius */
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add some spacing below the title */
+}
+
+/* .product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add some spacing below the price */
+/* }
+
+.price-label {
+  font-weight: bold;
+  margin-right: 5px; /* Add some spacing between label and value */
+/* } */
+
+/* .price-value {
+  font-size: 18px;
+} */
+
+.product-description {
+  line-height: 1.5; /* Adjust line spacing for better readability */
+  margin-bottom: 15px; /* Add some spacing below the description */
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-label {
+  font-weight: bold;
+  margin-right: 5px; /* Add some spacing between label and value */
+}
+
+.rating-value {
+  font-size: 18px;
+}
+
+.rating-stars {
+  color: orange;
+}
+
+.add-to-cart-button {
+  background-color: #28a745; /* Green color for "add to cart" */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+
