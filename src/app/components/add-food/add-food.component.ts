@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Food } from 'src/app/food';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-add-food',
@@ -13,8 +15,12 @@ export class AddFoodComponent {
    image !: string ;
    imageFile !: File | null;
    rating !: number;
+   showAddFood!: boolean;
+   subscription !: Subscription;
 
-
+   constructor(private uiService : UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddFood = value)
+   }
 
    onImageSelected(event: any) {
     this.imageFile = event.target.files[0]; // Access the selected file

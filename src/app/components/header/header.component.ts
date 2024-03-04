@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   showAddFood : boolean = false;
+  subscription !: Subscription;
 
+  constructor(private uiService : UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddFood = value);
+  }
 
   onToggleShow() : void {
-    this.showAddFood = !this.showAddFood;
+    this.uiService.toggleAddFood();
   }
 
 }

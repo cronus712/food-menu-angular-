@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="showAddFood">
 
  <form (ngSubmit) ="addFood()" class="add-form">
 
@@ -26,6 +26,6 @@
     name="rating" id="rating" placeholder="Add food rating">
   </div>
 
-  <button type="submit">Add Food Item</button>
+  <button type="submit" class="btn">Add Food Item</button>
  </form>
 </div>
