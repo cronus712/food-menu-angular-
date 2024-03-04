@@ -1,9 +1,7 @@
-.container
-{
+.container {
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-
+  display: flex; /* Maintain flexbox layout */
+  justify-content: space-between; /* Distribute items horizontally */
 }
 
 header {
@@ -13,28 +11,58 @@ header {
 }
 
 a.logo {
-padding: 1em;
+  padding: 1em;
 }
 
 a {
-color: rgb(143, 56, 56);
-padding: 1em;
-background-color: rgb(232, 164, 164);
-
+  color: rgb(143, 56, 56);
+  padding: 1em;
+  background-color: rgb(232, 164, 164);
 }
 
 a:hover {
-  background-color: rgb(216, 149, 94)
+  background-color: rgb(216, 149, 94);
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
+  display: flex; /* Convert the list into a flexbox container */
+  align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+  margin: 0; /* Remove default margin from list items */
+  padding: 0 ; /* Adjust padding if needed */
+
+}
+
+nav ul li.button-container {
+  /* Apply styles to the button container only */
+  display: flex; /* Make it a flexbox container */
+  align-items: center; /* Align button vertically within container */
+
 }
 
 nav ul li a {
-display: inline-block;
-padding: 1em;
+  display: inline-block; /* Maintain inline-block style */
+  padding: 1em;
 }
 
+button {
+  display: inline-block; /* Maintain inline-block behavior */
+  padding: 1em;
+  background-color: green; /* Inherit background color from `a` elements */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Indicate interactive element */
+  border-radius: 5%;
+  color: #f6f6f6;
+  margin-right: 50px ;
+
+}
+
+/* Optional for consistent styling: */
+button:hover {
+  background-color: rgb(216, 149, 94); /* Apply hover effect similar to links */
+}
 

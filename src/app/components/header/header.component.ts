@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  showAddFood : boolean = false;
+
+
+  onToggleShow() : void {
+    this.showAddFood = !this.showAddFood;
+  }
 
 }
