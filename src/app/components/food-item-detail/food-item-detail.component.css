@@ -14,6 +14,7 @@
   width: 20rem; /* Fill container width */
   object-fit: cover; /* Maintain aspect ratio */
   border-radius: 5px; /* Add subtle border radius */
+  height: 300px;
 }
 
 .product-info {
@@ -59,13 +60,6 @@
   margin-right: 5px; /* Add some spacing between label and value */
 }
 
-.rating-value {
-  font-size: 18px;
-}
-
-.rating-stars {
-  color: orange;
-}
 
 .add-to-cart-button {
   background-color: #28a745; /* Green color for "add to cart" */
@@ -77,4 +71,12 @@
   cursor: pointer;
 }
 
+.fa-star {
+  font-size: 2em;
+  cursor: pointer;
+  color: gray;
+}
 
+.fa-star.checked {
+  color: gold;
+}

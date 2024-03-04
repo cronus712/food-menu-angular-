@@ -11,16 +11,14 @@
 
     <div class="product-rating">
       <span class="rating-label">Rating:</span>
-      <span class="rating-value">{{ food.rating }}</span>
-      <span class="rating-stars">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-o"></i>
-        <i class="fa fa-star-o"></i>
-      </span>
+      <div class="rating">
+        <fa-icon *ngFor="let star of stars; let i = index"
+           class="fa fa-star"
+           [ngClass]="{'checked': food.rating > i }"
+           [icon]="faStar"></fa-icon>
+           {{ food.rating }}
+      </div>
     </div>
-
     <button class="add-to-cart-button" type="button">Add to Cart</button>
   </div>
 </div>

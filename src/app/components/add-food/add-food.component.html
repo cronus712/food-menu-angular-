@@ -20,10 +20,20 @@
     name="image" id="image" (change)="onImageSelected($event)">
   </div>
 
-  <div class="form-control">
+  <!-- <div class="form-control star-rating">
     <label for="name">Food rating</label>
     <input type="number" [(ngModel)] ="rating"
     name="rating" id="rating" placeholder="Add food rating">
+  </div> -->
+  <div class="form-control star-rating">
+    <label for="rating">Food Rating:</label>
+    <div class="star-container">
+      <fa-icon *ngFor="let star of stars; let i = index"
+         (click)="rate(i + 1)"
+         [icon] = "faStar"
+         class="fa fa-star"
+         [ngClass]="{'checked': rating >= i + 1}"></fa-icon>
+    </div>
   </div>
 
   <button type="submit" class="btn">Add Food Item</button>

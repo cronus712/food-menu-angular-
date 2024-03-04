@@ -10,15 +10,19 @@
       </h2>
 
 
-      <p>
+      <p >
         {{ food.description }}
       </p>
       <a>
         <img [src]="food.image" alt="{{ food.name }}"  routerLink="/food-item/{{ food.id }}">
       </a>
-        <div class="rating">
-          {{ food.rating }}
-        </div>
+      <div class="rating">
+        <fa-icon *ngFor="let star of stars; let i = index"
+           class="fa fa-star"
+           [ngClass]="{'checked': food.rating > i }"
+           [icon]="faStar"></fa-icon>
+      </div>
+
     </li>
 
   </ul>

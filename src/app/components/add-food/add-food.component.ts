@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Food } from 'src/app/food';
 import { UiService } from 'src/app/services/ui.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-add-food',
@@ -14,11 +15,15 @@ export class AddFoodComponent {
    description !: string;
    image !: string ;
    imageFile !: File | null;
-   rating !: number;
+   rating : number = 0;
    showAddFood!: boolean;
    subscription !: Subscription;
+   faStar = faStar;
+   stars = [1, 2, 3, 4, 5];
 
-   constructor(private uiService : UiService) {
+
+
+   constructor(private uiService : UiService, private cd: ChangeDetectorRef) {
     this.subscription = this.uiService.onToggle().subscribe(value => this.showAddFood = value)
    }
 
@@ -57,7 +62,12 @@ export class AddFoodComponent {
     } else {
       console.error("Please fill in all fields.");
     }
+
+    this.showAddFood = false;
   }
 
-
+  rate(rating: number) {
+    this.rating = rating;
+    this.cd.detectChanges(); // Trigger manual change detection
+  }
 }

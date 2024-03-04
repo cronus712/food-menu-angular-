@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router'
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -31,7 +32,8 @@ import { FoodItemDetailComponent } from './components/food-item-detail/food-item
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

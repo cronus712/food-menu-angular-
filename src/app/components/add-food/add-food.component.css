@@ -65,3 +65,15 @@
   font-size: 15px;
   font-family: inherit;
  }
+
+
+.fa-star {
+  font-size: 2em;
+  cursor: pointer;
+  color: gray;
+}
+
+.fa-star.checked {
+  color: gold;
+}
+

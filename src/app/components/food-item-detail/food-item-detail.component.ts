@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Food } from 'src/app/food';
 import { FoodService } from 'src/app/services/food-service.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-food-item-detail',
@@ -12,11 +13,14 @@ import { FoodService } from 'src/app/services/food-service.service';
 export class FoodItemDetailComponent {
   //  @Output() onGetFoodItem : EventEmitter<Food> = new EventEmitter();
    @Input() food !: Food;
-
+   stars!: number[]
+   faStar = faStar;
 
   constructor(private foodService : FoodService, private route: ActivatedRoute, private location : Location) {}
+  
   ngOnInit():void {
     this.getFood();
+    this.stars = Array(this.food.rating).fill(0); // Create array with length of rating
     console.log("food data:", this.food);
   }
   getFood():void {
