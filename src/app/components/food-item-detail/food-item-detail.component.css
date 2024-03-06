@@ -57,7 +57,7 @@
 
 .rating-label {
   font-weight: bold;
-  margin-right: 5px; /* Add some spacing between label and value */
+  margin-right: 20px; /* Add some spacing between label and value */
 }
 
 
@@ -79,4 +79,10 @@
 
 .fa-star.checked {
   color: gold;
+font-size: 1em;
+margin-top: 40px;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
 }

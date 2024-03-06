@@ -68,6 +68,5 @@ export class AddFoodComponent {
 
   rate(rating: number) {
     this.rating = rating;
-    this.cd.detectChanges(); // Trigger manual change detection
   }
 }

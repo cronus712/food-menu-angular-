@@ -17,15 +17,20 @@ export class FoodItemDetailComponent {
    faStar = faStar;
 
   constructor(private foodService : FoodService, private route: ActivatedRoute, private location : Location) {}
-  
+
   ngOnInit():void {
-    this.getFood();
-    this.stars = Array(this.food.rating).fill(0); // Create array with length of rating
+    this.route.paramMap.subscribe(params => {
+      const id = Number(params.get('id'));
+      this.foodService.getFoodItem(id).subscribe(food => {
+        this.food = food;
+        this.stars = Array(food.rating).fill(0);
+      });
+    });
     console.log("food data:", this.food);
   }
-  getFood():void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.foodService.getFoodItem(id).subscribe((food) => this.food = food);
-  }
+  // getFood():void {
+  //   const id = Number(this.route.snapshot.paramMap.get('id'));
+  //   this.foodService.getFoodItem(id).subscribe((food) => this.food = food);
+  // }
 
 }

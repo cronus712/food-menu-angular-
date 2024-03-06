@@ -1,4 +1,4 @@
-<div class="product-detail">
+<div class="product-detail" *ngIf="food">
   <div class="product-image-container">
     <img class="product-image" [src]="food.image" alt="{{ food.name }}">
   </div>
@@ -9,14 +9,13 @@
 
     <p class="product-description">{{ food.description }}</p>
 
-    <div class="product-rating">
+    <div class="rating-container">
       <span class="rating-label">Rating:</span>
       <div class="rating">
         <fa-icon *ngFor="let star of stars; let i = index"
            class="fa fa-star"
            [ngClass]="{'checked': food.rating > i }"
            [icon]="faStar"></fa-icon>
-           {{ food.rating }}
       </div>
     </div>
     <button class="add-to-cart-button" type="button">Add to Cart</button>
