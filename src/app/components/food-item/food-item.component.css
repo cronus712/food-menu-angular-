@@ -60,3 +60,16 @@
   background-color: #ddd;
 
 }
+.fa-heart.fas {
+  color: red; /* Change color to red for favorite state */
+
+}
+  .fa-heart {
+    margin-left:5rem;
+    cursor: pointer;
+  }
+ .food-icons {
+    display: flex;
+    align-items: center;
+
+ }

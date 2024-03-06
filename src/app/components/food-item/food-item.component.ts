@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Food } from 'src/app/food';
 import { FoodService } from 'src/app/services/food-service.service';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -15,6 +15,7 @@ export class FoodItemComponent {
  @Output() onDeleteTask : EventEmitter<Food> = new EventEmitter()
  @Output() onFoodDetails = new EventEmitter<Food>();
  faStar = faStar;
+ faHeart = faHeart;
  stars!: number[]
 
   gotoDetails(food: Food) {
@@ -31,5 +32,7 @@ export class FoodItemComponent {
     this.onDeleteTask.emit(food);
     console.log('delete')
   }
-
+  toggleFavorite() {
+    this.food.favorite = !this.food.favorite;
+  } 
 }

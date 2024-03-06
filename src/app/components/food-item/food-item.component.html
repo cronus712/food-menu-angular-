@@ -16,13 +16,25 @@
       <a>
         <img [src]="food.image" alt="{{ food.name }}"  routerLink="/food-item/{{ food.id }}">
       </a>
-      <div class="rating">
-        <fa-icon *ngFor="let star of stars; let i = index"
-           class="fa fa-star"
-           [ngClass]="{'checked': food.rating > i }"
-           [icon]="faStar"></fa-icon>
-      </div>
 
+      <div class="food-icons">
+        <div class="rating">
+          <fa-icon *ngFor="let star of stars; let i = index"
+             class="fa fa-star"
+             [ngClass]="{'checked': food.rating > i }"
+             [icon]="faStar"></fa-icon>
+        </div>
+
+        <div class="favortie-food">
+          <fa-icon class="fa fa-heart"
+          [ngClass]="{ 'fas': food.favorite, 'far': !food.favorite }"
+          (click)="toggleFavorite()"
+          [icon]="faHeart"
+         >
+        </fa-icon>
+        </div>
+
+      </div>
     </li>
 
   </ul>
