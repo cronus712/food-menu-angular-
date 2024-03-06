@@ -71,6 +71,9 @@
   font-size: 2em;
   cursor: pointer;
   color: gray;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 .fa-star.checked {
@@ -81,3 +84,11 @@
   width: 200px;
   height: 200px;
 }
+.fa-heart.fas {
+  color: red; /* Change color to red for favorite state */
+}
+ .fa-heart {
+  cursor: pointer;
+  font-size: 40px;
+  color:rgb(150, 141, 141);
+ }

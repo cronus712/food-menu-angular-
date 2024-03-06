@@ -39,6 +39,16 @@
     </div>
   </div>
 
+  <div class="form-control">
+    <label for="favorite">Favorite Food</label>
+    <fa-icon class="fa fa-heart"
+    [ngClass]="{ 'fas': favorite, 'far': !favorite }"
+    (click)="toggleFavorite()"
+    [icon]="faHeart"
+   >
+  </fa-icon>
+  </div>
+
   <button type="submit" class="btn">Add Food Item</button>
  </form>
 </div>

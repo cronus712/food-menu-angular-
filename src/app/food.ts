@@ -3,6 +3,7 @@ id ?: number,
 name : string,
 description : string,
 image : string,
-rating : number
+rating : number,
+favorite : boolean
 
 }
