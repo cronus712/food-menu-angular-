@@ -16,8 +16,11 @@
 
   <div class="form-control">
     <label for="image">Food image</label>
-    <input type="file" [(ngModel)] ="image"
-    name="image" id="image" (change)="onImageSelected($event)">
+    <input type="file" [(ngModel)]="imageFile" name="image" id="image" (change)="onImageSelected($event)">
+
+    <div *ngIf="imagePreview">
+      <img *ngIf="imagePreview" [src]="imagePreview" alt="Food preview" class="preview">
+    </div>
   </div>
 
   <!-- <div class="form-control star-rating">

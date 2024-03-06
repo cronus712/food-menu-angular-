@@ -20,7 +20,7 @@ export class AddFoodComponent {
    subscription !: Subscription;
    faStar = faStar;
    stars = [1, 2, 3, 4, 5];
-
+   imagePreview: string | null = null;
 
 
    constructor(private uiService : UiService, private cd: ChangeDetectorRef) {
@@ -28,7 +28,19 @@ export class AddFoodComponent {
    }
 
    onImageSelected(event: any) {
-    this.imageFile = event.target.files[0]; // Access the selected file
+    // this.imageFile = event.target.files[0]; Access the selected file
+    if (event.target.files && event.target.files[0]) {
+      this.imageFile = event.target.files[0]; // Store the selected file
+      const reader = new FileReader();
+      reader.readAsDataURL(this.imageFile! as Blob);  // Read the file
+      reader.onload = () => {
+        this.imagePreview = reader.result?.toString() || '';
+      };
+    } else {
+      console.log('here')
+      this.imageFile = null; // Clear imageFile and imagePreview
+      this.imagePreview = null;
+    }
   }
 
   addFood() {

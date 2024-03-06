@@ -77,3 +77,7 @@
   color: gold;
 }
 
+.form-control .preview {
+  width: 200px;
+  height: 200px;
+}
