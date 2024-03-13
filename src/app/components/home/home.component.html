@@ -3,7 +3,8 @@
 
 <div class="container">
   <app-food-item *ngFor="let food of foods" [food] = "food"
-   (onDeleteTask)="onDelete(food)">
+   (onDeleteTask)="onDelete(food)"
+   (onLikeFood)="onToggleLike(food)">
 </app-food-item>
 
 </div>

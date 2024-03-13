@@ -33,6 +33,11 @@ export class FoodService {
     return this.http.get<Food>(url);
   }
 
+  updateFavorite(food : Food) : Observable<Food> {
+   const url = `${this.baseUrl}/${food.id}`;
+   return this.http.patch<Food>(url,food);
+  }
+
   //to do
   //update task item && and like button in food item
 }

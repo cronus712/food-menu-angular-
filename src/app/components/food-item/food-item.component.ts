@@ -14,6 +14,7 @@ export class FoodItemComponent {
  @Input() food !: Food;
  @Output() onDeleteTask : EventEmitter<Food> = new EventEmitter()
  @Output() onFoodDetails = new EventEmitter<Food>();
+ @Output() onLikeFood : EventEmitter<Food> = new EventEmitter()
  faStar = faStar;
  faHeart = faHeart;
  stars!: number[]
@@ -33,6 +34,6 @@ export class FoodItemComponent {
     console.log('delete')
   }
   toggleFavorite() {
-    this.food.favorite = !this.food.favorite;
-  } 
+    this.onLikeFood.emit()
+  }
 }

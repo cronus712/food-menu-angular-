@@ -19,3 +19,9 @@ a {
 }
 
 
+.fa-heart.fas {
+  color: red; /* Change color to red for favorite state */
+
+}
+
+

@@ -29,6 +29,12 @@ export class HomeComponent {
     )
   }
 
+  onToggleLike(food : Food ) {
+    food.favorite = !food.favorite
+    this.foodService.updateFavorite(food).subscribe();
+    console.log(food.favorite)
+  }
+
   // getFood(food : Food) {
   //   this.foodService.getFoodItem(food).subscribe((food) => this.food = food);
   //   console.log('here')
