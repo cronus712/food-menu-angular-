@@ -20,7 +20,8 @@
       "Headers": {
         "normalizedNames": {},
         "lazyUpdate": null
-      }
+      },
+      "favorite": true
     },
     {
       "name": "qsdd",
@@ -31,7 +32,8 @@
       "Headers": {
         "normalizedNames": {},
         "lazyUpdate": null
-      }
+      },
+      "favorite": true
     },
     {
       "name": "sqdsqd",

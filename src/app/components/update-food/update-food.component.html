@@ -1,0 +1,35 @@
+<form class="update-food-form" *ngIf="food">
+
+<div class="product-detail" *ngIf="food">
+  <div class="product-image-container">
+    <img class="product-image" [src]="food.image" alt="{{ food.name }}">
+  </div>
+
+  <div class="product-info">
+    <h2 class="product-name">{{ food.name }}</h2>
+
+
+    <p class="product-description">{{ food.description }}</p>
+
+    <div class="rating-container">
+      <span class="rating-label">Rating:</span>
+      <div class="rating">
+        <fa-icon *ngFor="let star of stars; let i = index"
+           class="fa fa-star"
+           [ngClass]="{'checked': food.rating > i }"
+           [icon]="faStar"></fa-icon>
+      </div>
+    </div>
+
+    <div class="favortie-food">
+      <fa-icon class="fa fa-heart"
+      [ngClass]="{ 'fas': food.favorite, 'far': !food.favorite }"
+      [icon]="faHeart"
+     >
+    </fa-icon>
+    </div>
+    <button class="save" type="button">Save Changes</button>
+  </div>
+</div>
+
+</form>

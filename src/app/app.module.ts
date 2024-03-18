@@ -13,6 +13,7 @@ import { FoodComponent } from './components/food/food.component';
 import { FoodItemComponent } from './components/food-item/food-item.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
 import { FoodItemDetailComponent } from './components/food-item-detail/food-item-detail.component';
+import { UpdateFoodComponent } from './components/update-food/update-food.component';
 
 // const routes: Routes = [
 //   {path: '', component: HomeComponent}
@@ -26,7 +27,8 @@ import { FoodItemDetailComponent } from './components/food-item-detail/food-item
     FoodComponent,
     FoodItemComponent,
     AddFoodComponent,
-    FoodItemDetailComponent
+    FoodItemDetailComponent,
+    UpdateFoodComponent
   ],
   imports: [
     BrowserModule,

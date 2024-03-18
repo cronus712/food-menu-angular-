@@ -24,4 +24,7 @@ a {
 
 }
 
+.fa-star.checked {
+  color: gold;
+}
 

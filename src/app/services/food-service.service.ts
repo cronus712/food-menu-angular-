@@ -38,6 +38,11 @@ export class FoodService {
    return this.http.patch<Food>(url,food);
   }
 
+  updateFood(food : Food): Observable<Food> {
+   const url = `${this.baseUrl}/${food.id}`;
+    return this.http.put<Food>(url, food);
+  }
+
   //to do
   //update task item && and like button in food item
 }
