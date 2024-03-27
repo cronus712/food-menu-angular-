@@ -85,7 +85,7 @@
   height: 200px;
 }
 .fa-heart.fas {
-  color: red; /* Change color to red for favorite state */
+  color: red;
 }
  .fa-heart {
   cursor: pointer;
