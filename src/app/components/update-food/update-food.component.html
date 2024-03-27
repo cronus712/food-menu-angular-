@@ -2,29 +2,33 @@
 
 <div class="product-detail" *ngIf="food">
   <div class="product-image-container">
-    <img class="product-image" [src]="food.image" alt="{{ food.name }}">
+    <img class="product-image" [src]="food.image" alt="{{ food.name }}" >
   </div>
 
   <div class="product-info">
-    <h2 class="product-name">{{ food.name }}</h2>
-
-
-    <p class="product-description">{{ food.description }}</p>
-
-    <div class="rating-container">
-      <span class="rating-label">Rating:</span>
-      <div class="rating">
-        <fa-icon *ngFor="let star of stars; let i = index"
-           class="fa fa-star"
-           [ngClass]="{'checked': food.rating > i }"
-           [icon]="faStar"></fa-icon>
-      </div>
+    <div class="form-control">
+      <input type="text" [(ngModel)] ="food.name"
+      name="name" id="name">
     </div>
+     <div class="form-control">
+      <input type="text" name="description" id="description" [(ngModel)]="food.description">
+     </div>
+
+    <div class="form-control star-rating">
+    <div class="star-container">
+      <fa-icon *ngFor="let star of starss; let i = index"
+         (click)="rate(i + 1)"
+         [icon] = "faStar"
+         class="fa fa-star"
+         [ngClass]="{'checked': food.rating >= i + 1}"></fa-icon>
+    </div>
+  </div>
 
     <div class="favortie-food">
       <fa-icon class="fa fa-heart"
       [ngClass]="{ 'fas': food.favorite, 'far': !food.favorite }"
       [icon]="faHeart"
+      (click)="toggleFavorite()"
      >
     </fa-icon>
     </div>

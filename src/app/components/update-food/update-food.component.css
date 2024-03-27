@@ -1,0 +1,49 @@
+.update-food-form {
+  display: flex;
+  justify-content: center;
+}
+ .product-detail {
+  border: solid 1px rgb(255, 252, 252);
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+
+}
+
+.product-detail .product-image-container .product-image {
+    width: 350px;
+    height: 400px;
+    margin: 20px auto;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.product-detail .product-image-container {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-detail {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .product-detail .product-image-container {
+    width: 100%;
+  }
+}
+.fa-star {
+  cursor: pointer;
+  color: gray;
+}
+
+.fa-star.checked {
+  color: gold;
+font-size: 1em;
+margin-top: 40px;
+}
+
+.fa-heart {
+ cursor: pointer;
+}
