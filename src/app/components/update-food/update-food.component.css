@@ -20,7 +20,6 @@
     object-fit: cover;
     border-radius: 3px;
 
-
 }
 
 .product-detail .product-image-container {
@@ -83,4 +82,8 @@ margin-top: 40px;
   font-size: 15px;
   font-family: inherit;
   width: 100%;
+}
+.form-control .preview {
+  width: 200px;
+  height: 200px;
 }

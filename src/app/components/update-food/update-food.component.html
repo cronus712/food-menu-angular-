@@ -1,10 +1,13 @@
-<form class="update-food-form" *ngIf="food">
+<form class="update-food-form" *ngIf="food" (ngSubmit)="save()">
 
 <div class="product-detail" *ngIf="food">
   <div class="product-image-container">
     <img class="product-image" [src]="food.image" alt="{{ food.name }}" >
+    <input type="file" class="upload-button" name="image" id="image" (change)="onImageSelected($event)" [(ngModel)]="imageFile">
   </div>
-
+  <div *ngIf="imagePreview">
+    <img *ngIf="imagePreview" [src]="imagePreview" alt="Food preview" class="preview">
+  </div>
   <div class="product-info">
     <div class="form-control">
       <input type="text" [(ngModel)] ="food.name"
@@ -32,7 +35,7 @@
      >
     </fa-icon>
     </div>
-    <button class="btn" type="button">Save Changes</button>
+    <button class="btn" type="submit">Save Changes</button>
   </div>
 </div>
 

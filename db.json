@@ -16,12 +16,12 @@
       "name": "kafteji",
       "description": "Tunisian vegetable dish",
       "image": "assets/images/4.jpg",
-      "rating": 4,
+      "rating": 5,
       "Headers": {
         "normalizedNames": {},
         "lazyUpdate": null
       },
-      "favorite": true
+      "favorite": false
     },
     {
       "name": "qsdd",
